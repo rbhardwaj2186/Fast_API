@@ -1,8 +1,9 @@
+# Importing FastAPI Library
 from fastapi import Body, FastAPI
 
 app = FastAPI()
 
-
+# Creating a Dictionary of Book with keys and values
 BOOKS = [
     {'title': 'Title One', 'author': 'Author One', 'category': 'science'},
     {'title': 'Title Two', 'author': 'Author Two', 'category': 'science'},
@@ -12,7 +13,7 @@ BOOKS = [
     {'title': 'Title Six', 'author': 'Author Two', 'category': 'math'}
 ]
 
-
+# Adds a FastAPI end point decorator, and create a function that returns all the contents of BOOKS
 @app.get("/books")
 async def read_all_books():
     return BOOKS
