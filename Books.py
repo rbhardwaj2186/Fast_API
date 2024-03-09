@@ -1,8 +1,9 @@
+# FastAPI web framework is imported, and a FastAPI app instance is created.
 from fastapi import Body, FastAPI
 
 app = FastAPI()
 
-
+# Sample data for books is defined.
 BOOKS = [
     {'title': 'Title One', 'author': 'Author One', 'category': 'science'},
     {'title': 'Title Two', 'author': 'Author Two', 'category': 'science'},
@@ -13,6 +14,7 @@ BOOKS = [
 ]
 
 
+# FastAPI route handlers for CRUD operations on books are defined.
 @app.get("/books")
 async def read_all_books():
     return BOOKS
